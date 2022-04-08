@@ -15,23 +15,23 @@
             <label for="basic-url" class="form-label">아이디</label>
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">@</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="userid" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Username" aria-label="userid" name="userID" aria-describedby="basic-addon1">
             </div>
             <label for="basic-url" class="form-label">이름</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="이름" aria-label="name" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="이름" aria-label="name" name="userName" aria-describedby="basic-addon1">
             </div>
             <label for="basic-url" class="form-label">이메일</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="이메일" aria-label="email" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="이메일" aria-label="email" name="userEmail" aria-describedby="basic-addon1">
             </div>
             <label for="basic-url" class="form-label">비밀번호</label>
             <div class="input-group mb-3">
-                <input type="password" class="form-control" placeholder="비밀번호" aria-label="pwd1" aria-describedby="basic-addon2">
+                <input type="password" class="form-control" placeholder="비밀번호" aria-label="pwd1" name="userPwd" aria-describedby="basic-addon2">
             </div>
             <label for="basic-url" class="form-label">비밀번호 확인</label>
             <div class="input-group mb-3">
-                <input type="password" class="form-control" placeholder="비밀번호 확인" aria-label="pwd2" aria-describedby="basic-addon2">
+                <input type="password" class="form-control" placeholder="비밀번호 확인" aria-label="pwd2" name="userPwd2" aria-describedby="basic-addon2">
             </div>
             <div>
                 <input type="submit" class="btn btn-secondary" value="가입하기"/>

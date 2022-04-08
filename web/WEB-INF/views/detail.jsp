@@ -60,7 +60,6 @@
         </form>
         </thead>
         <tbody>
-        <c:forEach var="re" items="reply">
         <tr>
             <td style="padding-left:30px;">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</td>
             <td>한진호</td>
@@ -68,7 +67,6 @@
             <td class="col-1" style="text-align: right; color:gray;padding-right:20px;">수정</td>
             <td class="col-1" style="text-align: right; color:gray;padding-right:20px;">삭제</td>
         </tr>
-        </c:forEach>
         </tbody>
     </table>
     <button type="button" class="btn btn-secondary">목록</button>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Reply">
+    <select id="list" parameterType="int" resultType="board">
+        select * from reply where nID=#{nid} order by regDate desc;
+    </select>
+    <insert id="write" parameterType="Map">
+        insert into reply(userID,nID,rContent) values('jinho',#{nID},#{rContent});
+    </insert>
+    <delete id="delete" parameterType="int">
+        delete from reply where rno=${rno};
+    </delete>
+    <update id="update" parameterType="Map">
+        update reply set rContent=#{rContent} where rno=#{rno}
+    </update>
+</mapper>
