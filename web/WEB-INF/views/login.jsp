@@ -72,13 +72,13 @@
 
 <main class="form-signin">
     <h1 class="h3 mb-3 fw-normal">로그인</h1>
-
+    <form action="dologin" method="post">
     <div class="form-floating">
-        <input type="text" class="form-control" id="floatingInput" placeholder="UserID">
+        <input type="text" class="form-control" id="floatingInput" name="userID" placeholder="UserID">
         <label for="floatingInput">ID</label>
     </div>
     <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <input type="password" class="form-control" id="floatingPassword" name="userPwd" placeholder="Password">
         <label for="floatingPassword">Password</label>
     </div>
 
@@ -88,8 +88,9 @@
         </label>
     </div>
     <button class="w-100 btn btn-lg btn-secondary" type="submit">로그인</button>
-    <button class="w-100 btn btn-lg btn-secondary" type="submit" style="margin-top: 10px;">회원가입</button>
-    <button class="w-100 btn btn-lg btn-secondary" type="submit" style="margin-top: 30px;">홈으로</button>
+    </form>
+    <a href="/join"><button class="w-100 btn btn-lg btn-secondary" style="margin-top: 10px;">회원가입</button></a>
+    <a href="/"><button class="w-100 btn btn-lg btn-secondary" style="margin-top: 30px;">홈으로</button></a>
     </form>
 </main>
 

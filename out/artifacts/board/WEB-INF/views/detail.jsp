@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <div class="container">
     <br>
     <table class="table">
@@ -21,26 +22,27 @@
         </thead>
         <tbody>
         <tr style="text-align:center;">
-            <th scope="row">1</th>
-            <td>이거 개쩐당</td>
-            <td>jinho0547</td>
-            <td>2022-03-31</td>
-            <td>01</td>
-            <td>좋아요</td>
+            <th scope="row">${detail.nID}</th>
+            <td>${detail.nTitle}</td>
+            <td>${detail.userID}</td>
+            <td><fmt:formatDate value="${n.regDate}" pattern="yyyy-MM-dd"/></td>
+            <td>${detail.hit}</td>
+            <td>${detail.likes}</td>
         </tr>
         </tbody>
     </table>
     <table class="table">
         <thead>
         <tr>
-            <th colspan="6" style="text-align: center;">내용</thc>
+            <hr>
+            <th colspan="6" style="text-align: center;">내용</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <td rowspan=10>
                 <div style="margin:30px;padding:30px;">
-                    asdasasddddddddddddddddddddddddddddddddddd
+                    ${detail.nContent}
                 </div>
             </td>
         </tr>
@@ -49,12 +51,19 @@
     <table class="table">
         <thead>
         <th>댓글</th>
+        <form action method>
+        <textarea rows="4" cols="155" style="margin-left:10px"></textarea>
+
+        <button type="submit" class="btn btn-secondary" style="width:100px; height:100px;float: right; top:50px">댓글 작성</button>
+
+        </form>
         </thead>
         <tbody>
         <tr>
             <td style="padding-left:30px;">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</td>
             <td>한진호</td>
             <td class="col-1">2022/03/31</td>
+            <td class="col-1" style="text-align: right; color:gray;padding-right:20px;">수정</td>
             <td class="col-1" style="text-align: right; color:gray;padding-right:20px;">삭제</td>
         </tr>
         </tbody>

@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="container">
     <br>
     <table class="table">
@@ -34,7 +35,8 @@
     <table class="table">
         <thead>
         <tr>
-            <th colspan="6" style="text-align: center;">내용</thc>
+            <hr>
+            <th colspan="6" style="text-align: center;">내용</th>
         </tr>
         </thead>
         <tbody>
@@ -50,8 +52,15 @@
     <table class="table">
         <thead>
         <th>댓글</th>
+        <form action method>
+        <textarea rows="4" cols="155" style="margin-left:10px"></textarea>
+
+        <button type="submit" class="btn btn-secondary" style="width:100px; height:100px;float: right; top:50px">댓글 작성</button>
+
+        </form>
         </thead>
         <tbody>
+        <c:forEach var="re" items="reply">
         <tr>
             <td style="padding-left:30px;">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</td>
             <td>한진호</td>
@@ -59,6 +68,7 @@
             <td class="col-1" style="text-align: right; color:gray;padding-right:20px;">수정</td>
             <td class="col-1" style="text-align: right; color:gray;padding-right:20px;">삭제</td>
         </tr>
+        </c:forEach>
         </tbody>
     </table>
     <button type="button" class="btn btn-secondary">목록</button>
