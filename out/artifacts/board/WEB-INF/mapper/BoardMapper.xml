@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Board">
+    <select id="list" parameterType="Map" resultType="board">
+        select * from notice where nTitle like '%${title}%' order by regDate desc limit ${page},10;
+    </select>
+    <insert id="write" parameterType="Map">
+        insert into notice(nTitle,nContent,userID) values(#{nTitle},#{nContent},'jinho');
+    </insert>
+    <select id="detail" parameterType="int" resultType="board">
+        select * from notice where nID=${id};
+    </select>
+</mapper>
